@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "newLine": "LF",
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "experimentalDecorators": true,
+        "lib": [
+            "ES2020",
+            "DOM"
+        ],
+        "module": "commonjs",
+        "target": "ES2019",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "declaration": true,
+        "outDir": "lib",
+        "removeComments": false
+    }
+}

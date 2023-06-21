@@ -1,0 +1,33 @@
+{
+  "name": "oauth-credential",
+  "version": "1.0.0",
+  "description": "OAuth Authentication",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc && npm run build:umd",
+    "build:umd": "npx esbuild@latest src/index.ts --bundle --minify --target=node14 --format=iife --outfile=lib/odata-client-umd.js",
+    "test": "jest --silent",
+    "lint": "tsc --noEmit && eslint src/**/*.*",
+    "test:watch": "npm test -- --watch",
+    "coverage": "npm test -- --coverage --no-cache",
+    "coverage:watch": "npm run coverage -- --watch",
+    "release": "npx standard-version --no-verify",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "OAuth-Credential"
+  ],
+  "homepage": "https://github.com/santoskleber/oauth-credential",
+  "base": "https://github.com/Soontao/light-odata/blob/main/src/odata.ts",
+  "author": {
+    "name": "Kleber Santos",
+    "email": "kleberabap@gmail.com",
+    "url": "https://github.com/santoskleber"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "typescript": "^5.1.3"
+  }
+}
